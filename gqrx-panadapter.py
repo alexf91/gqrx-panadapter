@@ -67,15 +67,9 @@ def main():
         print('Unexpected error:', e, file=sys.stderr)
         return 1
 
-    try:
-        rs.close()
-    except:
-        pass
+    rs.close()
+    gs.close()
 
-    try:
-        gs.close()
-    except:
-        pass
 
 if __name__ == '__main__':
     sys.exit(main() or 0)
